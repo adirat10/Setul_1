@@ -218,79 +218,48 @@ namespace Probleme_Setul_1
         /// </summary>
         private static void P16()
         {
-            Console.WriteLine("Introduceti 5 numere:");
-            Console.Write("a= ");
-            int a = int.Parse(Console.ReadLine());
-            Console.Write("b= ");
-            int b = int.Parse(Console.ReadLine());
-            Console.Write("c= ");
-            int c = int.Parse(Console.ReadLine());
-            Console.Write("d= ");
-            int d = int.Parse(Console.ReadLine());
-            Console.Write("e= ");
-            int e = int.Parse(Console.ReadLine());
-            int max = 0;
-            if (a > b)
+            int a, b, c, d, e;
+
+            Console.Write("a=");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b=");
+            b = int.Parse(Console.ReadLine());
+            Console.Write("c=");
+            c = int.Parse(Console.ReadLine());
+            Console.Write("d=");
+            d = int.Parse(Console.ReadLine());
+            Console.Write("e=");
+            e = int.Parse(Console.ReadLine());
+
+            int minv = int.MaxValue, maxv = int.MinValue;
+
+            if (a < minv)
+                minv = a;
+            if (b < minv)
+                minv = b;
+            if (c < minv)
+                minv = c;
+            if (d < minv)
+                minv = d;
+            if (e < minv)
+                minv = e;
+
+            if (a > maxv)
+                maxv = a;
+            if (b > maxv)
+                maxv = b;
+            if (c > maxv)
+                maxv = c;
+            if (d > maxv)
+                maxv = d;
+            if (e > maxv)
+                maxv = e;
+
+            for (int i = minv; i <= maxv; i++)
             {
-                max = a;
-                a = b;
-                b = max;
+                if (i == a || i == b || i == c || i == d || i == e)
+                    Console.Write($"{i} ");
             }
-            if (b > c)
-            {
-                max = b;
-                b = c;
-                c = max;
-            }
-            if (c > d)
-            {
-                max = c;
-                c = d;
-                d = max;
-            }
-            if (d > e)
-            {
-                max = d;
-                d = e;
-                e = max;
-            }
-            if (a > b)
-            {
-                max = a;
-                a = b;
-                b = max;
-            }
-            if (b > c)
-            {
-                max = b;
-                b = c;
-                c = max;
-            }
-            if (c > d)
-            {
-                max = c;
-                c = d;
-                d = max;
-            }
-            if (a > b)
-            {
-                max = a;
-                a = b;
-                b = max;
-            }
-            if (b > c)
-            {
-                max = b;
-                b = c;
-                c = max;
-            }
-            if (a > b)
-            {
-                max = a;
-                a = b;
-                b = max;
-            }
-            Console.WriteLine($"Numerele ordonate crescator sunt {a}, {b}, {c}, {d} si {e}");
         }
 
         /// <summary>
